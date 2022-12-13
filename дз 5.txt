@@ -1,0 +1,47 @@
+class Cooperator
+{
+    String surname;
+    String name;
+    String patronymic;
+    String job_title;
+    String email;
+    String telephone;
+    int salary;
+    int age;
+    public Cooperator(String surname, String name, String patronymic, String job_title, String email, String telephone, int salary, int age){
+        this.surname = surname;
+        this.name = name;
+        this.patronymic = patronymic;
+        this.job_title = job_title;
+        this.email = email;
+        this.telephone = telephone;
+        this.salary = salary;
+        this.age = age;
+   
+    }
+    public void print(){
+        System.out.println(surname + " , " +  name + " , " + patronymic + " , " + job_title + " , " + email + " , " + telephone + " , " + salary + " , " + age);
+    }
+    public void age(){
+        if (age > 40){
+        System.out.println(surname + " , " +  name + " , " + patronymic + " , " + job_title + " , " + email + " , " + telephone + " , " + salary + " , " + age);
+        }
+    }
+
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Cooperator[] cooperatorArray = new Cooperator[5];
+	    cooperatorArray[0] = new Cooperator("Ivanov", "Ivan", "Alexeevich", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 30);
+	    cooperatorArray[1] = new Cooperator("Petrov", "Andrew", "Alexandrovich", "Driver", "petrov@mailbox.com", "896504923", 40000, 35); 
+        cooperatorArray[2] = new Cooperator("Mironov", "Lev", "Alexandrovich", "Accountant", "mironov@mailbox.com", "891223798", 25000, 48); 
+	    cooperatorArray[3] = new Cooperator("Klimova", "Alena", "Arsentievna", "Veterinarian", "klimova@mailbox.com", "891156743", 38000, 56); 
+	    cooperatorArray[4] = new Cooperator("Monina", "Ekaterina", "Dmitrievna" , "Actress", "monina@mailbox.com", "893859601", 35000, 19); 
+	    for (int i = 0; i < cooperatorArray.length; i++){
+	        cooperatorArray[i].age();
+	    }
+	}
+}
+
+
